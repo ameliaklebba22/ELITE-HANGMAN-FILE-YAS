@@ -68,6 +68,35 @@ class GameController: UIViewController {
        override func viewDidLoad() {
        super.viewDidLoad()
            
+           aoutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           boutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           coutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           doutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           eoutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           foutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           goutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           houtlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           ioutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           joutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           koutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           loutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           moulet.titleLabel?.adjustsFontSizeToFitWidth = true
+           noutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           ooutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           poutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           qoutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           routlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           soutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           toutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           uoutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           voulet.titleLabel?.adjustsFontSizeToFitWidth = true
+           woutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           xoutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           youtlet.titleLabel?.adjustsFontSizeToFitWidth = true
+           zoutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+
+           
+           
            
            let docRef = database.document("word/words")
            docRef.getDocument { snapshot, error in
@@ -860,7 +889,7 @@ class GameController: UIViewController {
       
     //losing alert
     func alertMoment(){
-        let alert = UIAlertController(title: "You Lost Your Streak!", message: "The word was  \(chosen). Enter your name to send your streak to global leader board.", preferredStyle: .alert);            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "You Lost Your Streak!", message: "The word was \(chosen). Enter your name to send your streak to global leader board.", preferredStyle: .alert);            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Send", style: .default, handler: { [self] ale in
                 guard let fields = alert.textFields, fields.count == 1 else{
                 return
@@ -889,7 +918,7 @@ class GameController: UIViewController {
 
    //winning alert
     func otherAlertMoment(){
-        let epic = UIAlertController(title: "Coreect!.", message: "You got the word right, the word was \(chosen)." , preferredStyle: .alert)
+        let epic = UIAlertController(title: "Correct!.", message: "You got the word right, the word was \(chosen)." , preferredStyle: .alert)
         let gamer = UIAlertAction(title: "Okay", style: .default, handler: nil)
         epic.addAction(gamer)
         present(epic, animated: true, completion: nil)
